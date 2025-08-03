@@ -1,0 +1,16 @@
+1.	What is the motivation behind Retrieval-Augmented Generation (RAG)?
+        RAG enhances the capabilities of language models by combining them with external knowledge retrieval. This allows the model to access up-to-date or domain-specific information beyond its training data, improving accuracy and factual correctness.
+
+2.	Explain the Difference between RAG and standard LLM-based QA.
+        Standard LLM-based QA relies solely on pre-trained model knowledge, which may be outdated or limited. RAG retrieves relevant documents from an external source and uses them during generation, making answers more grounded and context-specific.
+
+3.	What is the role of a vector store in a RAG pipeline?
+        A vector store stores embedded documents as high-dimensional vectors. It enables efficient similarity search to retrieve the most relevant chunks based on a user's query embedding.
+
+4.	Compare of “stuff”, “map_reduce”, and “refine” document chain types in LangChain:
+        • Stuff loads all documents into context at once—fast but limited by token size.
+        •	Map_reduce processes documents individually (map) then combines summaries (reduce)—good for scalability.
+        •	Refine iteratively builds a summary, refining it with each new document—offers better coherence but slower.
+
+5.	What are the main components of a basic LangChain RAG pipeline?
+        It includes a retriever (usually backed by a vector store), a language model (LLM), and a chain that coordinates retrieval and generation. Optional components include a document loader, embedding model, and prompt templates.
